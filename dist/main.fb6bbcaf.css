@@ -30,7 +30,7 @@
 }
 .nav-bar .nav-links li {
   float: left;
-  font-size: 1.1rem;
+  font-size: 1.1em;
 }
 .nav-bar .nav-links li:not(:last-child) {
   margin-right: 2rem;
@@ -43,26 +43,28 @@
 .welcome {
   background-image: url("/bg-1.9af5762f.png");
   background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
   color: #FFFFFF;
   width: 100%;
   text-align: center;
-  height: 29rem;
+  height: 60vh;
   padding-top: 3rem;
   overflow: hidden;
 }
 .welcome__caption {
-  font-size: 7.7rem;
+  font-size: 7.7em;
   letter-spacing: -7px;
   font-weight: 800;
   user-select: none;
 }
 .welcome__description {
-  font-size: 2.3rem;
+  font-size: 2.3em;
   font-weight: 300;
   margin-top: -3rem;
 }
 .welcome__text {
-  font-size: 1.1rem;
+  font-size: 1.1em;
   font-weight: 300;
   width: 40rem;
   margin-left: auto;
@@ -114,7 +116,7 @@
   color: #101010;
   text-transform: uppercase;
   font-weight: 800;
-  font-size: 1.8rem;
+  font-size: 1.8em;
   transition: all 0.6s;
 }
 .welcome__button a:hover {
