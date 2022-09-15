@@ -1,0 +1,8 @@
+@use '/scss/colors';
+@use '/scss/images';
+
+
+body {
+    background-image: images.$background-home;
+    
+}

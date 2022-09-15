@@ -1,0 +1,1 @@
+{"version":3,"sources":["scss\\main.scss","scss\\images.scss"],"names":[],"mappings":"AAIA;EACI,8DCLc","file":"main.fb6bbcaf.css","sourceRoot":"..\\src","sourcesContent":["@use '/scss/colors';\r\n@use '/scss/images';\r\n\r\n\r\nbody {\r\n    background-image: images.$background-home;\r\n    \r\n}","$background-home: url(\"/assets/Backgrounds/bg-1.png\");"]}
