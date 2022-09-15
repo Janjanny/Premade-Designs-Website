@@ -1,6 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Dosis:wght@200;400;600;700;800&display=swap");
 .nav-bar {
+  opacity: 0;
   position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
   background-color: #101010;
   width: 100%;
   color: #FFFFFF;
@@ -26,7 +30,7 @@
 }
 .nav-bar .nav-links li {
   float: left;
-  font-size: 1.1em;
+  font-size: 1.1rem;
 }
 .nav-bar .nav-links li:not(:last-child) {
   margin-right: 2rem;
@@ -36,11 +40,101 @@
   text-decoration: none;
 }
 
+.welcome {
+  background-image: url("/bg-1.9af5762f.png");
+  background-size: cover;
+  color: #FFFFFF;
+  width: 100%;
+  text-align: center;
+  height: 29rem;
+  padding-top: 3rem;
+  overflow: hidden;
+}
+.welcome__caption {
+  font-size: 7.7rem;
+  letter-spacing: -7px;
+  font-weight: 800;
+  user-select: none;
+}
+.welcome__description {
+  font-size: 2.3rem;
+  font-weight: 300;
+  margin-top: -3rem;
+}
+.welcome__text {
+  font-size: 1.1rem;
+  font-weight: 300;
+  width: 40rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -0.5rem;
+}
+.welcome__button {
+  background-color: #FFD369;
+  width: fit-content;
+  border-radius: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
+  width: 300px;
+  height: 55px;
+}
+.welcome__button::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 40px;
+  background-color: #101010;
+  z-index: 0;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.6s;
+}
+.welcome__button:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+.welcome__button a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  color: #101010;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 1.8rem;
+  transition: all 0.6s;
+}
+.welcome__button a:hover {
+  color: #FFFFFF;
+}
+
 * {
   font-family: "Poppins", sans-serif;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+body {
+  font-size: 100%;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
 }
 
 /*# sourceMappingURL=/main.fb6bbcaf.css.map */
