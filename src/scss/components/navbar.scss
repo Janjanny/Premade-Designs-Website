@@ -1,0 +1,45 @@
+@use 'abstracts/' as *;
+
+
+.nav-bar {
+    position: fixed;
+    background-color: $black;
+    width: 100%;
+    color: $white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 4rem;
+    padding: 0 40px;
+
+    a {
+        height: 4rem;
+        line-height: 4rem;
+        vertical-align: center;
+        .logo {
+            width: 5.5rem;
+            height: 4rem;
+            line-height: 4rem;
+            vertical-align: center;
+        }
+    }
+
+    .nav-links {
+        list-style: none;
+
+        li {
+            float: left;
+            font-size: $regular;
+
+            &:not(:last-child) {
+                margin-right: 2rem;
+            }
+
+            a {
+                color: $white;
+                text-decoration: none;
+            }
+        }
+
+    }
+}

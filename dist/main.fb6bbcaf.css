@@ -1,5 +1,46 @@
-body {
-  background-image: url("/bg-1.9af5762f.png");
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@200;400;600;700;800&display=swap");
+.nav-bar {
+  position: fixed;
+  background-color: #101010;
+  width: 100%;
+  color: #FFFFFF;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 4rem;
+  padding: 0 40px;
+}
+.nav-bar a {
+  height: 4rem;
+  line-height: 4rem;
+  vertical-align: center;
+}
+.nav-bar a .logo {
+  width: 5.5rem;
+  height: 4rem;
+  line-height: 4rem;
+  vertical-align: center;
+}
+.nav-bar .nav-links {
+  list-style: none;
+}
+.nav-bar .nav-links li {
+  float: left;
+  font-size: 1.1em;
+}
+.nav-bar .nav-links li:not(:last-child) {
+  margin-right: 2rem;
+}
+.nav-bar .nav-links li a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 /*# sourceMappingURL=/main.fb6bbcaf.css.map */

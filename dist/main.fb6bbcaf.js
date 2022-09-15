@@ -189,7 +189,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"C:\\Users\\Jan\\Documents\\Web Design\\WEB PROJECTS\\T Shirt Design Website\\src\\assets\\Backgrounds\\bg-1.png":[["bg-1.9af5762f.png","assets/Backgrounds/bg-1.png"],"assets/Backgrounds/bg-1.png"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"js/main.js":[function(require,module,exports) {
+},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"js/main.js":[function(require,module,exports) {
 "use strict";
 
 require("./../scss/main.scss");
