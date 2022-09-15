@@ -1,8 +1,8 @@
-@use '/scss/colors';
-@use '/scss/images';
+@use 'abstracts/' as *;
+
 
 
 body {
-    background-image: images.$background-home;
+    background-image: $background-home;
     
 }
