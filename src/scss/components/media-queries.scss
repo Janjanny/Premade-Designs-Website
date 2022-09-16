@@ -188,10 +188,16 @@
 
     .banner {
         height: 18vh;
+
+        &__title {
+            letter-spacing: -2px;
+
+        }
+
     }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 430px) {
     html {
         font-size: 30%;
     }
@@ -280,7 +286,7 @@
         &__title {
             margin-top: 1rem;
 
-            letter-spacing: -2.5px;
+            letter-spacing: -1px;
             
         }
         &__txt_div {

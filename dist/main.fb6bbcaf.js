@@ -201,6 +201,25 @@ var content = document.querySelector(".carousel__list");
 for (var i = 0; i < elementDisplay; i++) {
   content.appendChild(content.children[i].cloneNode(true));
 }
+
+var track = document.querySelector('.carousel2__container__track');
+var slides = Array.from(track.children);
+var nextButton = document.querySelector('.carousel2__button--right');
+var prevButton = document.querySelector('.carousel2__button--left');
+var dotsNav = document.querySelector('.carousel2__nav');
+var dots = Array.from(dotsNav.children); //get the size of the slide
+
+var slideSize = slides[0].getBoundingClientRect(); //get the width
+
+var slideWidth = slideSize.width; //get the height
+
+var slideHeight = slideSize.height; //arrange the slides next to one another
+// slides[0].style.left = `${slideWidth * 0}px`;
+// slides[1].style.left = `${slideWidth * 1}px`;
+
+slides.forEach(function (slides, index) {}); //when click left, move slides to the left
+// when click right, move slides to the right
+//update the nav indicators
 },{"./../scss/main.scss":"scss/main.scss"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -229,7 +248,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59372" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55522" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
