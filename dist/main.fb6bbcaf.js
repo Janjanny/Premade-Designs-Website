@@ -189,7 +189,11 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"C:\\Users\\Jan\\Documents\\Web Design\\WEB PROJECTS\\T Shirt Design Website\\src\\assets\\Backgrounds\\bg-1.png":[["bg-1.9af5762f.png","assets/Backgrounds/bg-1.png"],"assets/Backgrounds/bg-1.png"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"js/carousel.js":[function(require,module,exports) {
+},{"C:\\Users\\Jan\\Documents\\Web Design\\WEB PROJECTS\\T Shirt Design Website\\src\\assets\\Backgrounds\\bg-1.png":[["bg-1.9af5762f.png","assets/Backgrounds/bg-1.png"],"assets/Backgrounds/bg-1.png"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"js/main.js":[function(require,module,exports) {
+"use strict";
+
+require("./../scss/main.scss");
+
 var root = document.documentElement;
 var elementDisplay = 5;
 var content = document.querySelector(".carousel__list");
@@ -197,15 +201,7 @@ var content = document.querySelector(".carousel__list");
 for (var i = 0; i < elementDisplay; i++) {
   content.appendChild(content.children[i].cloneNode(true));
 }
-},{}],"js/main.js":[function(require,module,exports) {
-"use strict";
-
-require("./../scss/main.scss");
-
-var _carousel = _interopRequireDefault(require("./carousel.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-},{"./../scss/main.scss":"scss/main.scss","./carousel.js":"js/carousel.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./../scss/main.scss":"scss/main.scss"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;

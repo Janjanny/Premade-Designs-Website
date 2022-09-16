@@ -1,0 +1,160 @@
+@media (max-width:1025px) {
+    html {
+        font-size: 80%;
+    }
+
+    .welcome {
+        height: 55vh;
+
+        &__button {
+            width: 250px;
+            height: 48px;
+        }
+    }
+
+    .carousel {
+        height: 46vh;
+    }
+
+
+    .about-me {
+        height: 50vh;
+    }
+    
+}
+
+@media (max-width: 855px) {
+    html {
+        font-size: 75%;
+    }
+
+    .welcome {
+        height: 50vh;
+
+        &__button {
+            width: 250px;
+            height: 48px;
+        }
+    }
+    .carousel {
+        height: 44vh;
+    }
+}
+
+
+@media (max-width: 770px) {
+    html {
+        font-size: 65%;
+    }
+
+    .welcome {
+        height: 45vh;
+
+        &__button {
+            width: 230px;
+            height: 45px;
+        }
+    }
+
+    .carousel {
+        height: 38vh;
+    }
+}
+
+
+@media (max-width: 660px) {
+    html {
+        font-size: 60%;
+    }
+
+    .welcome {
+        height: 40vh;
+
+        &__button {
+            width: 200px;
+            height: 40px;
+        }
+
+        &__caption {
+        letter-spacing: -4px;
+
+        }
+    }
+
+    .carousel {
+        height: 35vh;
+    }
+}
+
+
+@media (max-width: 630px) {
+    html {
+        font-size: 50%;
+    }
+
+    .welcome {
+        height: 33vh;
+
+        &__button {
+            width: 150px;
+            height: 30px;
+        }
+
+        &__caption {
+        letter-spacing: -2px;
+
+        }
+    }
+
+    .carousel {
+        height: 30vh;
+    }
+}
+
+@media (max-width: 530px) {
+    html {
+        font-size: 40%;
+    }
+
+    .welcome {
+        height: 27vh;
+
+        &__button {
+            width: 130px;
+            height: 25px;
+        }
+
+        &__caption {
+        letter-spacing: -2px;
+
+        }
+    }
+
+    .carousel {
+        height: 24vh;
+    }
+}
+
+@media (max-width: 425px) {
+    html {
+        font-size: 30%;
+    }
+
+    .welcome {
+        height: 21vh;
+
+        &__button {
+            width: 100px;
+            height: 20px;
+        }
+
+        &__caption {
+        letter-spacing: -1px;
+
+        }
+    }
+
+    .carousel {
+        height: 18vh;
+    }
+}
