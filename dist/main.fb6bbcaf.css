@@ -171,16 +171,19 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 3rem;
 }
 .design .carousel2__container {
   background-color: red;
   height: 100%;
   position: relative;
   border-radius: 3rem;
+  overflow: hidden;
 }
 .design .carousel2__container__track {
   list-style: none;
+  position: relative;
+  height: 100%;
+  transition: all 0.7s ease-in-out;
 }
 .design .carousel2__container__track__slide {
   position: absolute;
@@ -220,9 +223,13 @@
   height: 1rem;
   margin: 0 0.8rem;
   background-color: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
 }
 .design .carousel2__indicator.current-slide {
   background-color: rgba(255, 255, 255, 0.8);
+}
+.design .carousel2 .is-hidden {
+  display: none;
 }
 
 .about_me {
