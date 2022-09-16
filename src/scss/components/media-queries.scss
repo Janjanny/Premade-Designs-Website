@@ -17,8 +17,8 @@
     }
 
 
-    .about-me {
-        height: 50vh;
+    .about_me {
+        height: 110vh;
     }
     
 }
@@ -58,6 +58,19 @@
 
     .carousel {
         height: 38vh;
+    }
+
+    .about_me {
+        height: 100vh;
+        &__title {
+            letter-spacing: -3px;
+        }
+        &__txt_div {
+            &__button {
+                width: 150px;
+                height: 40px;
+            }
+        }
     }
 }
 
@@ -109,6 +122,19 @@
     .carousel {
         height: 30vh;
     }
+
+    .about_me {
+        height: 75vh;
+        &__title {
+            letter-spacing: -2.5px;
+        }
+        &__txt_div {
+            &__button {
+                width: 120px;
+                height: 30px;
+            }
+        }
+    }
 }
 
 @media (max-width: 530px) {
@@ -132,6 +158,19 @@
 
     .carousel {
         height: 24vh;
+    }
+
+    .about_me {
+        height: 65vh;
+        &__title {
+            letter-spacing: -2.5px;
+        }
+        &__txt_div {
+            &__button {
+                width: 98px;
+                height: 25px;
+            }
+        }
     }
 }
 
@@ -157,4 +196,86 @@
     .carousel {
         height: 18vh;
     }
+
+    .about_me {
+        height: 65vh;
+        flex-direction: column;
+        flex-wrap: nowrap;
+
+        &__img_div {
+            width: 100%;
+            margin-bottom: 5rem;
+        }
+
+        &__title {
+            margin-top: 1rem;
+
+            letter-spacing: -2.5px;
+            
+        }
+        &__txt_div {
+            width: 100%;
+            text-align: center;
+            margin: 0;
+            padding: 2rem;
+
+            &__caption {
+                font-size: 5rem;
+            }
+
+            &__text {
+                width: 80%;
+                margin: 0 auto;
+            }
+
+            &__button {
+                width: 70px;
+                height: 20px;
+                margin: 3rem auto;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 321px) {
+    html {
+        font-size: 25%;
+    }
+
+    .about_me {
+        height: 50vh;
+        flex-direction: column;
+        flex-wrap: nowrap;
+
+        &__img_div {
+            width: 100%;
+            margin-bottom: 5rem;
+        }
+
+        &__title {
+            margin-top: 1rem;
+
+            letter-spacing: -2.5px;
+            
+        }
+        &__txt_div {
+            width: 100%;
+            text-align: center;
+            margin: 0;
+            padding: 2rem;
+
+            &__text {
+                width: 80%;
+                margin: 0 auto;
+            }
+
+            &__button {
+                width: 70px;
+                height: 20px;
+                margin: 3rem auto;
+            }
+        }
+    }
+    
 }

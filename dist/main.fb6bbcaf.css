@@ -154,126 +154,6 @@
     transform: translateX(-360vw);
   }
 }
-@media (max-width: 1025px) {
-  html {
-    font-size: 80%;
-  }
-  .welcome {
-    height: 55vh;
-  }
-  .welcome__button {
-    width: 250px;
-    height: 48px;
-  }
-  .carousel {
-    height: 46vh;
-  }
-  .about-me {
-    height: 50vh;
-  }
-}
-@media (max-width: 855px) {
-  html {
-    font-size: 75%;
-  }
-  .welcome {
-    height: 50vh;
-  }
-  .welcome__button {
-    width: 250px;
-    height: 48px;
-  }
-  .carousel {
-    height: 44vh;
-  }
-}
-@media (max-width: 770px) {
-  html {
-    font-size: 65%;
-  }
-  .welcome {
-    height: 45vh;
-  }
-  .welcome__button {
-    width: 230px;
-    height: 45px;
-  }
-  .carousel {
-    height: 38vh;
-  }
-}
-@media (max-width: 660px) {
-  html {
-    font-size: 60%;
-  }
-  .welcome {
-    height: 40vh;
-  }
-  .welcome__button {
-    width: 200px;
-    height: 40px;
-  }
-  .welcome__caption {
-    letter-spacing: -4px;
-  }
-  .carousel {
-    height: 35vh;
-  }
-}
-@media (max-width: 630px) {
-  html {
-    font-size: 50%;
-  }
-  .welcome {
-    height: 33vh;
-  }
-  .welcome__button {
-    width: 150px;
-    height: 30px;
-  }
-  .welcome__caption {
-    letter-spacing: -2px;
-  }
-  .carousel {
-    height: 30vh;
-  }
-}
-@media (max-width: 530px) {
-  html {
-    font-size: 40%;
-  }
-  .welcome {
-    height: 27vh;
-  }
-  .welcome__button {
-    width: 130px;
-    height: 25px;
-  }
-  .welcome__caption {
-    letter-spacing: -2px;
-  }
-  .carousel {
-    height: 24vh;
-  }
-}
-@media (max-width: 425px) {
-  html {
-    font-size: 30%;
-  }
-  .welcome {
-    height: 21vh;
-  }
-  .welcome__button {
-    width: 100px;
-    height: 20px;
-  }
-  .welcome__caption {
-    letter-spacing: -1px;
-  }
-  .carousel {
-    height: 18vh;
-  }
-}
 .about_me {
   width: 100%;
   height: 120vh;
@@ -295,7 +175,6 @@
 }
 .about_me__img_div {
   width: 45%;
-  height: 100%;
   display: flex;
   justify-content: center;
 }
@@ -320,7 +199,7 @@
 }
 .about_me__txt_div__caption {
   color: #FFFFFF;
-  font-size: 4em;
+  font-size: 3.5em;
   line-height: 3.8rem;
   margin-bottom: 1.5rem;
 }
@@ -368,6 +247,220 @@
   border: 2px solid #FFD369;
 }
 
+@media (max-width: 1025px) {
+  html {
+    font-size: 80%;
+  }
+  .welcome {
+    height: 55vh;
+  }
+  .welcome__button {
+    width: 250px;
+    height: 48px;
+  }
+  .carousel {
+    height: 46vh;
+  }
+  .about_me {
+    height: 110vh;
+  }
+}
+@media (max-width: 855px) {
+  html {
+    font-size: 75%;
+  }
+  .welcome {
+    height: 50vh;
+  }
+  .welcome__button {
+    width: 250px;
+    height: 48px;
+  }
+  .carousel {
+    height: 44vh;
+  }
+}
+@media (max-width: 770px) {
+  html {
+    font-size: 65%;
+  }
+  .welcome {
+    height: 45vh;
+  }
+  .welcome__button {
+    width: 230px;
+    height: 45px;
+  }
+  .carousel {
+    height: 38vh;
+  }
+  .about_me {
+    height: 100vh;
+  }
+  .about_me__title {
+    letter-spacing: -3px;
+  }
+  .about_me__txt_div__button {
+    width: 150px;
+    height: 40px;
+  }
+}
+@media (max-width: 660px) {
+  html {
+    font-size: 60%;
+  }
+  .welcome {
+    height: 40vh;
+  }
+  .welcome__button {
+    width: 200px;
+    height: 40px;
+  }
+  .welcome__caption {
+    letter-spacing: -4px;
+  }
+  .carousel {
+    height: 35vh;
+  }
+}
+@media (max-width: 630px) {
+  html {
+    font-size: 50%;
+  }
+  .welcome {
+    height: 33vh;
+  }
+  .welcome__button {
+    width: 150px;
+    height: 30px;
+  }
+  .welcome__caption {
+    letter-spacing: -2px;
+  }
+  .carousel {
+    height: 30vh;
+  }
+  .about_me {
+    height: 75vh;
+  }
+  .about_me__title {
+    letter-spacing: -2.5px;
+  }
+  .about_me__txt_div__button {
+    width: 120px;
+    height: 30px;
+  }
+}
+@media (max-width: 530px) {
+  html {
+    font-size: 40%;
+  }
+  .welcome {
+    height: 27vh;
+  }
+  .welcome__button {
+    width: 130px;
+    height: 25px;
+  }
+  .welcome__caption {
+    letter-spacing: -2px;
+  }
+  .carousel {
+    height: 24vh;
+  }
+  .about_me {
+    height: 65vh;
+  }
+  .about_me__title {
+    letter-spacing: -2.5px;
+  }
+  .about_me__txt_div__button {
+    width: 98px;
+    height: 25px;
+  }
+}
+@media (max-width: 425px) {
+  html {
+    font-size: 30%;
+  }
+  .welcome {
+    height: 21vh;
+  }
+  .welcome__button {
+    width: 100px;
+    height: 20px;
+  }
+  .welcome__caption {
+    letter-spacing: -1px;
+  }
+  .carousel {
+    height: 18vh;
+  }
+  .about_me {
+    height: 65vh;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+  .about_me__img_div {
+    width: 100%;
+    margin-bottom: 5rem;
+  }
+  .about_me__title {
+    margin-top: 1rem;
+    letter-spacing: -2.5px;
+  }
+  .about_me__txt_div {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    padding: 2rem;
+  }
+  .about_me__txt_div__caption {
+    font-size: 5rem;
+  }
+  .about_me__txt_div__text {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .about_me__txt_div__button {
+    width: 70px;
+    height: 20px;
+    margin: 3rem auto;
+  }
+}
+@media (max-width: 321px) {
+  html {
+    font-size: 25%;
+  }
+  .about_me {
+    height: 50vh;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+  .about_me__img_div {
+    width: 100%;
+    margin-bottom: 5rem;
+  }
+  .about_me__title {
+    margin-top: 1rem;
+    letter-spacing: -2.5px;
+  }
+  .about_me__txt_div {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    padding: 2rem;
+  }
+  .about_me__txt_div__text {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .about_me__txt_div__button {
+    width: 70px;
+    height: 20px;
+    margin: 3rem auto;
+  }
+}
 * {
   font-family: "Poppins", sans-serif;
   padding: 0;
