@@ -1,0 +1,30 @@
+@use 'abstracts/' as *;
+
+
+.banner {
+    width: 100%;
+    text-align: center;
+    background-image: $background-design;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &__title {
+        font-size: calc($title * .90);
+        color: $yellow;
+        text-transform: uppercase;
+        letter-spacing: -7px;
+        font-weight: 800;
+        line-height: 5rem;
+
+    }
+
+    &__text{
+        font-size: calc($heading * 0.90);
+        color: $white;
+    }
+}

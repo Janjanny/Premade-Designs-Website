@@ -169,7 +169,6 @@
   color: #FFD369;
   font-size: 5em;
   margin-top: 5rem;
-  margin-bottom: 5rem;
   text-transform: uppercase;
   letter-spacing: -5px;
 }
@@ -247,6 +246,31 @@
   border: 2px solid #FFD369;
 }
 
+.banner {
+  width: 100%;
+  text-align: center;
+  background-image: url("/bg-2.0d8c0843.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.banner__title {
+  font-size: 6.93em;
+  color: #FFD369;
+  text-transform: uppercase;
+  letter-spacing: -7px;
+  font-weight: 800;
+  line-height: 5rem;
+}
+.banner__text {
+  font-size: 2.07em;
+  color: #FFFFFF;
+}
+
 @media (max-width: 1025px) {
   html {
     font-size: 80%;
@@ -264,6 +288,9 @@
   .about_me {
     height: 110vh;
   }
+  .banner {
+    height: 30vh;
+  }
 }
 @media (max-width: 855px) {
   html {
@@ -278,6 +305,9 @@
   }
   .carousel {
     height: 44vh;
+  }
+  .banner {
+    height: 25vh;
   }
 }
 @media (max-width: 770px) {
@@ -303,6 +333,9 @@
   .about_me__txt_div__button {
     width: 150px;
     height: 40px;
+  }
+  .banner__title {
+    letter-spacing: -5px;
   }
 }
 @media (max-width: 660px) {
@@ -378,6 +411,9 @@
     width: 98px;
     height: 25px;
   }
+  .banner {
+    height: 18vh;
+  }
 }
 @media (max-width: 425px) {
   html {
@@ -426,6 +462,12 @@
     width: 70px;
     height: 20px;
     margin: 3rem auto;
+  }
+  .banner {
+    height: 12vh;
+  }
+  .banner__title {
+    letter-spacing: -2px;
   }
 }
 @media (max-width: 321px) {

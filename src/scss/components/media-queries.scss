@@ -21,6 +21,9 @@
         height: 110vh;
     }
     
+    .banner {
+        height: 30vh;
+    }
 }
 
 @media (max-width: 855px) {
@@ -38,6 +41,10 @@
     }
     .carousel {
         height: 44vh;
+    }
+
+    .banner {
+        height: 25vh;
     }
 }
 
@@ -70,6 +77,12 @@
                 width: 150px;
                 height: 40px;
             }
+        }
+    }
+
+    .banner {
+        &__title {
+            letter-spacing: -5px;
         }
     }
 }
@@ -172,6 +185,10 @@
             }
         }
     }
+
+    .banner {
+        height: 18vh;
+    }
 }
 
 @media (max-width: 425px) {
@@ -233,6 +250,13 @@
                 height: 20px;
                 margin: 3rem auto;
             }
+        }
+    }
+
+    .banner {
+        height: 12vh;
+        &__title{
+            letter-spacing: -2px;
         }
     }
 }
