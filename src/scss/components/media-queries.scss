@@ -24,6 +24,14 @@
     .banner {
         height: 30vh;
     }
+
+    .design, .design-alt {
+        height: 205vh;
+    }
+
+    .footer {
+        height: 65vh;
+    }
 }
 
 @media (max-width: 855px) {
@@ -45,6 +53,10 @@
 
     .banner {
         height: 25vh;
+    }
+
+    .design, .design-alt {
+        height: 200vh;
     }
 }
 
@@ -85,6 +97,16 @@
             letter-spacing: -5px;
         }
     }
+
+
+
+    .design, .design-alt {
+        height: 170vh;
+    }
+
+    .footer {
+        height: 55vh;
+    }
 }
 
 
@@ -109,6 +131,14 @@
 
     .carousel {
         height: 35vh;
+    }
+
+    .design, .design-alt {
+        height: 160vh;
+    }
+
+    .footer {
+        height: 40vh;
     }
 }
 
@@ -147,6 +177,10 @@
                 height: 30px;
             }
         }
+    }
+
+    .design, .design-alt {
+        height: 130vh;
     }
 }
 
@@ -194,6 +228,13 @@
 
         }
 
+    }
+
+    .design, .design-alt {
+        height: 105vh;
+    }
+    .footer {
+        height: 35vh;
     }
 }
 
@@ -265,6 +306,14 @@
             letter-spacing: -2px;
         }
     }
+
+    .design, .design-alt {
+        height: 80vh;
+    }
+
+    .footer {
+        height: 28vh;
+    }
 }
 
 
@@ -306,6 +355,13 @@
                 margin: 3rem auto;
             }
         }
+    }
+
+    .design, .design-alt {
+        height: 70vh;
+    }
+    .footer {
+        height: 28vh;
     }
     
 }

@@ -636,6 +636,131 @@
   display: none;
 }
 
+.footer {
+  width: 100%;
+  height: 80vh;
+  background-color: #101010;
+  color: #FFFFFF;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5rem 3rem;
+}
+.footer .text {
+  width: 50%;
+}
+.footer .text__title {
+  font-size: 3.5em;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: -0.07rem;
+  line-height: 4.5rem;
+}
+.footer .text__caption {
+  font-size: 1.1em;
+  width: 90%;
+  margin-bottom: 1.5rem;
+}
+.footer .text .phone-icon {
+  font-size: 1.5em;
+  margin-right: 1rem;
+}
+.footer .text__number {
+  display: inline-block;
+  font-size: 1.1em;
+}
+.footer .text .envelop-icon {
+  font-size: 1.5em;
+  margin-top: 1rem;
+  margin-right: 1rem;
+}
+.footer .text__email {
+  display: inline-block;
+  font-size: 1.1em;
+  margin-bottom: 1.5rem;
+}
+.footer .text__icons a {
+  color: #FFFFFF;
+  font-size: 2.3em;
+  margin-right: 1.5rem;
+}
+.footer .text__icons a:hover {
+  color: #FFD369;
+}
+.footer .text__icons a .icon {
+  transition: all 0.3s;
+}
+.footer .text__icons a .icon:hover {
+  transform: translateY(-0.5rem);
+}
+.footer .form-div {
+  width: 50%;
+  overflow: hidden;
+}
+.footer .form-div form {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  justify-content: center;
+  margin-left: auto;
+  position: relative;
+}
+.footer .form-div form input[type=email], .footer .form-div form input[type=text] {
+  width: 100%;
+  height: 2.5rem;
+  padding-left: 0.8rem;
+  background-color: transparent;
+  color: #FFFFFF;
+  border: 0.125rem solid #FFFFFF;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1.1em;
+}
+.footer .form-div form input:focus {
+  outline: none;
+  border: 0.1875 solid #FFD369;
+}
+.footer .form-div form input:-webkit-autofill {
+  box-shadow: 0 0 0px 1000px #101010 inset;
+  -webkit-text-fill-color: #FFFFFF;
+}
+.footer .form-div form #message-box {
+  background-color: transparent;
+  color: #FFFFFF;
+  font-size: 1.1em;
+  border: 0.125rem solid #FFFFFF;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  padding-left: 0.8rem;
+  padding-top: 0.2rem;
+  resize: none;
+  width: 100%;
+}
+.footer .form-div form #message-box:focus {
+  border: 0.1875 solid #FFD369;
+  outline: none;
+}
+.footer .form-div form .submit {
+  border-radius: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  width: 14rem;
+  height: 2.8rem;
+  font-size: 1.5em;
+  font-weight: 600;
+  background-color: #FFFFFF;
+  color: #101010;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.footer .form-div form .submit:hover {
+  color: #FFFFFF;
+  background-color: transparent;
+  border: 0.125rem solid #FFFFFF;
+}
+
 @media (max-width: 1025px) {
   html {
     font-size: 80%;
@@ -656,6 +781,12 @@
   .banner {
     height: 30vh;
   }
+  .design, .design-alt {
+    height: 205vh;
+  }
+  .footer {
+    height: 65vh;
+  }
 }
 @media (max-width: 855px) {
   html {
@@ -673,6 +804,9 @@
   }
   .banner {
     height: 25vh;
+  }
+  .design, .design-alt {
+    height: 200vh;
   }
 }
 @media (max-width: 770px) {
@@ -702,6 +836,12 @@
   .banner__title {
     letter-spacing: -5px;
   }
+  .design, .design-alt {
+    height: 170vh;
+  }
+  .footer {
+    height: 55vh;
+  }
 }
 @media (max-width: 660px) {
   html {
@@ -719,6 +859,12 @@
   }
   .carousel {
     height: 35vh;
+  }
+  .design, .design-alt {
+    height: 160vh;
+  }
+  .footer {
+    height: 40vh;
   }
 }
 @media (max-width: 630px) {
@@ -747,6 +893,9 @@
   .about_me__txt_div__button {
     width: 120px;
     height: 30px;
+  }
+  .design, .design-alt {
+    height: 130vh;
   }
 }
 @media (max-width: 530px) {
@@ -781,6 +930,12 @@
   }
   .banner__title {
     letter-spacing: -2px;
+  }
+  .design, .design-alt {
+    height: 105vh;
+  }
+  .footer {
+    height: 35vh;
   }
 }
 @media (max-width: 430px) {
@@ -837,6 +992,12 @@
   .banner__title {
     letter-spacing: -2px;
   }
+  .design, .design-alt {
+    height: 80vh;
+  }
+  .footer {
+    height: 28vh;
+  }
 }
 @media (max-width: 321px) {
   html {
@@ -869,6 +1030,12 @@
     width: 70px;
     height: 20px;
     margin: 3rem auto;
+  }
+  .design, .design-alt {
+    height: 70vh;
+  }
+  .footer {
+    height: 28vh;
   }
 }
 * {
