@@ -74,7 +74,7 @@
 }
 .welcome__button {
   background-color: #FFD369;
-  border-radius: 40px;
+  border-radius: 2.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -135,7 +135,7 @@
   list-style: none;
   height: 100%;
   display: flex;
-  animation: scrolling 48s linear infinite;
+  animation: scrolling 52s linear infinite;
 }
 .carousel__list__item {
   width: 40rem;
@@ -151,47 +151,40 @@
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-360vw);
+    transform: translateX(-390vw);
   }
 }
-.design {
-  width: 100%;
-  background-color: #101010;
-  height: 150vh;
-  padding: 10rem 0;
-  overflow: hidden;
-}
-.design .carousel2 {
+.carousel2 {
   position: relative;
   height: 35rem;
   width: 60rem;
   margin: 0 auto;
 }
-.design .carousel2__image {
+.carousel2__image {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.design .carousel2__container {
+.carousel2__container {
   background-color: red;
   height: 100%;
   position: relative;
   border-radius: 3rem;
   overflow: hidden;
 }
-.design .carousel2__container__track {
+.carousel2__container__track {
   list-style: none;
   position: relative;
   height: 100%;
   transition: all 0.7s ease-in-out;
 }
-.design .carousel2__container__track__slide {
+.carousel2__container__track__slide {
   position: absolute;
   top: 0;
   bottom: 0;
   width: 100%;
 }
-.design .carousel2__button {
+.carousel2__button {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -199,24 +192,24 @@
   border: 0;
   cursor: pointer;
 }
-.design .carousel2__button .icon {
+.carousel2__button .icon {
   font-size: 3rem;
   color: #101010;
 }
-.design .carousel2__button--left {
+.carousel2__button--left {
   left: 1rem;
   z-index: 1;
 }
-.design .carousel2__button--right {
+.carousel2__button--right {
   right: 1rem;
   z-index: 1;
 }
-.design .carousel2__nav {
+.carousel2__nav {
   display: flex;
   justify-content: center;
   padding: 0.8rem 0;
 }
-.design .carousel2__indicator {
+.carousel2__indicator {
   border: 0;
   border-radius: 50%;
   width: 1rem;
@@ -225,10 +218,10 @@
   background-color: rgba(255, 255, 255, 0.3);
   cursor: pointer;
 }
-.design .carousel2__indicator.current-slide {
+.carousel2__indicator.current-slide {
   background-color: rgba(255, 255, 255, 0.8);
 }
-.design .carousel2 .is-hidden {
+.carousel2 .is-hidden {
   display: none;
 }
 
@@ -288,7 +281,7 @@
 }
 .about_me__txt_div__button {
   background-color: #FFD369;
-  border-radius: 40px;
+  border-radius: 2.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -347,6 +340,300 @@
 .banner__text {
   font-size: 2.07em;
   color: #FFFFFF;
+}
+
+.design {
+  width: 100%;
+  background-color: #101010;
+  height: 250vh;
+  padding: 10rem 0;
+  overflow: hidden;
+  color: #FFFFFF;
+}
+.design__title {
+  color: #B7D432;
+  font-size: 7.7em;
+  font-weight: 800;
+  letter-spacing: -0.4rem;
+  line-height: 6rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+.design__quote {
+  color: #FFFFFF;
+  font-size: 1.8em;
+  text-align: center;
+  margin-bottom: 5rem;
+}
+.design__info {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  margin-top: 5rem;
+}
+.design__info__image {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.design__info__image img {
+  width: 30rem;
+  user-select: none;
+}
+.design__info__text {
+  width: 50%;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 1.5rem;
+}
+.design__info__text_heading {
+  font-size: 3.5em;
+  line-height: 3rem;
+  font-weight: 800;
+  letter-spacing: -0.07rem;
+  margin-bottom: 3rem;
+}
+.design__info__text_list {
+  text-transform: uppercase;
+  padding-left: 2rem;
+  font-size: 1.5em;
+  margin-bottom: 2rem;
+}
+.design__info__text_description {
+  font-size: 1.1em;
+  width: 95%;
+  margin-bottom: 3rem;
+}
+.design__info__text_price {
+  font-size: 3.5em;
+  font-weight: 800;
+  letter-spacing: -0.04rem;
+}
+.design__info__text .button-div {
+  border-radius: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  width: 22rem;
+  height: 3.5rem;
+  background-color: #B7D432;
+  margin-top: 2.5rem;
+  transition: all 0.3s;
+}
+.design__info__text .button-div a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  font-size: 1.8em;
+  color: #101010;
+  font-weight: 800;
+  text-transform: uppercase;
+  transition: all 0.3s;
+}
+.design__info__text .button-div a:hover {
+  color: #B7D432;
+}
+.design__info__text .button-div:hover {
+  background-color: #101010;
+  border: 2px solid #B7D432;
+}
+.design__note {
+  text-align: center;
+  margin-top: 7rem;
+  font-size: 1.5em;
+  font-weight: 100;
+}
+
+.design-alt {
+  width: 100%;
+  background-color: #FFFFFF;
+  height: 250vh;
+  padding: 10rem 0;
+  overflow: hidden;
+  color: #101010;
+}
+.design-alt__title {
+  color: #444444;
+  font-size: 7.7em;
+  font-weight: 800;
+  letter-spacing: -0.4rem;
+  line-height: 6rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+.design-alt__quote {
+  font-size: 1.8em;
+  text-align: center;
+  margin-bottom: 5rem;
+}
+.design-alt__info {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  margin-top: 5rem;
+}
+.design-alt__info__image {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.design-alt__info__image img {
+  width: 30rem;
+  user-select: none;
+}
+.design-alt__info__text {
+  width: 50%;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 1.5rem;
+}
+.design-alt__info__text_heading {
+  font-size: 3.5em;
+  line-height: 3rem;
+  font-weight: 800;
+  letter-spacing: -0.07rem;
+  margin-bottom: 3rem;
+}
+.design-alt__info__text_list {
+  text-transform: uppercase;
+  padding-left: 2rem;
+  font-size: 1.5em;
+  margin-bottom: 2rem;
+}
+.design-alt__info__text_description {
+  font-size: 1.1em;
+  width: 95%;
+  margin-bottom: 3rem;
+}
+.design-alt__info__text_price {
+  font-size: 3.5em;
+  font-weight: 800;
+  letter-spacing: -0.04rem;
+}
+.design-alt__info__text .button-div {
+  border-radius: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  width: 22rem;
+  height: 3.5rem;
+  background-color: #444444;
+  margin-top: 2.5rem;
+  transition: all 0.3s;
+}
+.design-alt__info__text .button-div a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  font-size: 1.8em;
+  color: #FFFFFF;
+  font-weight: 800;
+  text-transform: uppercase;
+  transition: all 0.3s;
+}
+.design-alt__info__text .button-div a:hover {
+  color: #444444;
+}
+.design-alt__info__text .button-div:hover {
+  background-color: transparent;
+  border: 2px solid #101010;
+}
+.design-alt__note {
+  text-align: center;
+  margin-top: 7rem;
+  font-size: 1.5em;
+  font-weight: 300;
+}
+
+.carousel3 {
+  position: relative;
+  height: 35rem;
+  width: 60rem;
+  margin: 0 auto;
+}
+.carousel3__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.carousel3__container {
+  background-color: red;
+  height: 100%;
+  position: relative;
+  border-radius: 3rem;
+  overflow: hidden;
+}
+.carousel3__container__track {
+  list-style: none;
+  position: relative;
+  height: 100%;
+  transition: all 0.7s ease-in-out;
+}
+.carousel3__container__track__slide {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+.carousel3__button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+}
+.carousel3__button .icon {
+  font-size: 3rem;
+  color: #101010;
+}
+.carousel3__button--left {
+  left: 1rem;
+  z-index: 1;
+}
+.carousel3__button--right {
+  right: 1rem;
+  z-index: 1;
+}
+.carousel3__nav {
+  display: flex;
+  justify-content: center;
+  padding: 0.8rem 0;
+}
+.carousel3__indicator {
+  border: 0;
+  border-radius: 50%;
+  width: 1rem;
+  height: 1rem;
+  margin: 0 0.8rem;
+  background-color: rgba(16, 16, 16, 0.3);
+  cursor: pointer;
+}
+.carousel3__indicator.current-slide2 {
+  background-color: rgba(16, 16, 16, 0.8);
+}
+.carousel3 .is-hidden2 {
+  display: none;
 }
 
 @media (max-width: 1025px) {
@@ -593,6 +880,7 @@
 
 body {
   font-size: 100%;
+  width: 100%;
 }
 
 .container {

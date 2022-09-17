@@ -1,0 +1,125 @@
+@use 'abstracts/' as *;
+
+
+.design-alt {
+    width: 100%;
+    background-color: $white;
+    height: 250vh;
+    padding: 10rem 0;
+    overflow: hidden;
+    color: $black;
+
+    &__title {
+        color: $design2;
+        font-size: $title;
+        font-weight: 800;
+        letter-spacing: -.4rem;
+        line-height: 6rem;
+
+        text-transform: uppercase;
+        text-align: center;
+
+    }
+
+    &__quote {
+        font-size: $button-font;
+        text-align: center;
+        margin-bottom: 5rem;
+        
+    
+    }
+
+    &__info {
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        margin-top: 5rem;
+
+        &__image {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img {
+                width: 30rem;
+                user-select: none;
+            }
+        }
+
+        &__text {
+            width: 50%;
+            padding-left: 2rem;
+            padding-right: 2rem;
+            padding-top: 1.5rem;
+
+            &_heading {
+                font-size: $big-heading;
+                line-height: 3rem;
+                font-weight: 800;
+                letter-spacing: -.07rem;
+                margin-bottom: 3rem;
+            }
+
+            &_list{
+                text-transform: uppercase;
+                padding-left: 2rem;
+                font-size: $regular2;
+                margin-bottom: 2rem;
+            }
+
+            &_description {
+                font-size: $regular;
+                width: 95%;
+                margin-bottom: 3rem;
+            }
+
+            &_price {
+                font-size: $big-heading;
+                font-weight: 800;
+                letter-spacing: -.04rem;
+
+            }
+
+            .button-div {
+                @include button-style;
+                width: 22rem;
+                height: 3.5rem;
+                background-color: $design2;
+                margin-top: 2.5rem;
+
+                transition: all .3s;
+
+                a {
+                    @include button-text;
+                    font-size: $button-font;
+                    color: $white;
+                    font-weight: 800;
+                    text-transform: uppercase;
+
+                    transition: all .3s;
+
+
+                    &:hover {
+                        color: $design2;
+                    }
+                }
+
+                &:hover{
+                    background-color: transparent;
+                    border: 2px solid $black;
+                }
+
+                
+            }
+        }
+    }
+
+    &__note {
+        text-align: center;
+        margin-top: 7rem;
+        font-size: $regular2;
+        font-weight: 300;
+    }
+
+
+}

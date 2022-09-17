@@ -1,51 +1,7 @@
-
 @use 'abstracts/' as *;
 
-$elements: 13;
-$elements-displayed: 4;
-$animation-duration: calc($elements * 4s);
 
-.carousel {
-    background-color: $black;
-    width: 100%;
-    height: 52vh;
-    overflow: hidden;
-    padding: auto 0;
-    position: relative;
-
-    
-
-    &__list {
-        list-style: none;
-        height: 100%;
-        display: flex;
-        animation: scrolling $animation-duration linear infinite;
-
-
-        &__item {
-            width: 40rem;
-            flex-shrink: 0;
-            white-space: nowrap;
-
-            img {
-                width: 40rem;
-            }
-        }
-    }
-}
-
-
-@keyframes scrolling {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-1*30vw*$elements);
-    }
-}
-
-
-.carousel2 {
+.carousel3 {
     position: relative;
     height: 35rem;
     width: 60rem;
@@ -120,15 +76,15 @@ $animation-duration: calc($elements * 4s);
         width: 1rem;
         height: 1rem;
         margin: 0 .8rem;
-        background-color: rgba($color: $white, $alpha: .3);
+        background-color: rgba($color: $black, $alpha: .3);
         cursor: pointer;
     }
 
-    &__indicator.current-slide{
-        background-color: rgba($color: $white, $alpha: .80);
+    &__indicator.current-slide2{
+        background-color: rgba($color: $black, $alpha: .80);
     }
 
-    .is-hidden {
+    .is-hidden2 {
         display: none;
     }
 }

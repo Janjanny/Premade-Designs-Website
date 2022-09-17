@@ -189,122 +189,264 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"C:\\Users\\Jan\\Documents\\Web Design\\WEB PROJECTS\\T Shirt Design Website\\src\\assets\\Backgrounds\\bg-1.png":[["bg-1.9af5762f.png","assets/Backgrounds/bg-1.png"],"assets/Backgrounds/bg-1.png"],"C:\\Users\\Jan\\Documents\\Web Design\\WEB PROJECTS\\T Shirt Design Website\\src\\assets\\Backgrounds\\bg-2.png":[["bg-2.0d8c0843.png","assets/Backgrounds/bg-2.png"],"assets/Backgrounds/bg-2.png"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"js/main.js":[function(require,module,exports) {
+},{"C:\\Users\\Jan\\Documents\\Web Design\\WEB PROJECTS\\T Shirt Design Website\\src\\assets\\Backgrounds\\bg-1.png":[["bg-1.9af5762f.png","assets/Backgrounds/bg-1.png"],"assets/Backgrounds/bg-1.png"],"C:\\Users\\Jan\\Documents\\Web Design\\WEB PROJECTS\\T Shirt Design Website\\src\\assets\\Backgrounds\\bg-2.png":[["bg-2.0d8c0843.png","assets/Backgrounds/bg-2.png"],"assets/Backgrounds/bg-2.png"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"js/carousel.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = carousel;
+
+function carousel() {
+  var root = document.documentElement;
+  var elementDisplay = 7;
+  var content = document.querySelector(".carousel__list");
+
+  for (var i = 0; i < elementDisplay; i++) {
+    content.appendChild(content.children[i].cloneNode(true));
+  }
+}
+},{}],"js/carouselDesign.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = carouselDesign;
+
+function carouselDesign() {
+  var track = document.querySelector('.carousel2__container__track');
+  var slides = Array.from(track.children);
+  var nextButton = document.querySelector('.carousel2__button--right');
+  var prevButton = document.querySelector('.carousel2__button--left');
+  var dotsNav = document.querySelector('.carousel2__nav');
+  var dots = Array.from(dotsNav.children); //get the size of the slide
+
+  var slideSize = slides[0].getBoundingClientRect(); //get the width
+
+  var slideWidth = slideSize.width; //get the height
+
+  var slideHeight = slideSize.height; //arrange the slides next to one another
+  // slides[0].style.left = `${slideWidth * 0}px`;
+  // slides[1].style.left = `${slideWidth * 1}px`;
+
+  var setSlidePosition = function setSlidePosition(slide, index) {
+    slide.style.left = "".concat(slideWidth * index, "px");
+  }; //iterate the slides and assign the function
+
+
+  slides.forEach(setSlidePosition); //move slide function
+
+  var moveToSlide = function moveToSlide(track, currentSlide, targetSlide) {
+    //move to next slide
+    track.style.transform = 'translateX(-' + targetSlide.style.left + ')'; //update the class
+
+    currentSlide.classList.remove('current-slide');
+    targetSlide.classList.add('current-slide');
+  }; //update the dots
+
+
+  var updateDots = function updateDots(currentDot, targetDot) {
+    currentDot.classList.remove('current-slide');
+    targetDot.classList.add('current-slide');
+  }; //hiding the arrow buttons
+
+
+  var hideShowArrows = function hideShowArrows(slides, nextButton, prevButton, targetIndex) {
+    //for hiding the button
+    if (targetIndex === 0) {
+      prevButton.classList.add('is-hidden');
+      nextButton.classList.remove('is-hidden');
+    } else if (targetIndex === slides.length - 1) {
+      prevButton.classList.remove('is-hidden');
+      nextButton.classList.add('is-hidden');
+    } else {
+      nextButton.classList.add('is-hidden');
+      prevButton.classList.add('is-hidden');
+    }
+  }; //when click left, move slides to the left
+
+
+  prevButton.addEventListener('click', function (e) {
+    var currentSlide = track.querySelector('.current-slide');
+    var prevSlide = currentSlide.previousElementSibling;
+    var currentDot = dotsNav.querySelector('.current-slide');
+    var prevDot = currentDot.previousElementSibling;
+    var prevIndex = slides.findIndex(function (slide) {
+      return slide === prevSlide;
+    });
+    moveToSlide(track, currentSlide, prevSlide);
+    updateDots(currentDot, prevDot); //arrow functions
+
+    hideShowArrows(slides, nextButton, prevButton, prevIndex);
+  }); // when click right, move slides to the right
+
+  nextButton.addEventListener('click', function (e) {
+    //keep track of the slide
+    var currentSlide = track.querySelector('.current-slide');
+    var nextSlide = currentSlide.nextElementSibling;
+    var currentDot = dotsNav.querySelector('.current-slide');
+    var nextDot = currentDot.nextElementSibling;
+    var nextIndex = slides.findIndex(function (slide) {
+      return slide === nextSlide;
+    }); //pass args to move function
+
+    moveToSlide(track, currentSlide, nextSlide); //update the dots
+
+    updateDots(currentDot, nextDot); //arrow functions
+
+    hideShowArrows(slides, nextButton, prevButton, nextIndex);
+  }); //update the nav indicators
+
+  dotsNav.addEventListener('click', function (e) {
+    //what indicator was clicked on
+    //focus only the buttons
+    var targetDot = e.target.closest('button'); //check if null = stop the function
+
+    if (!targetDot) return;
+    var currentSlide = track.querySelector('.current-slide');
+    var currentDot = dotsNav.querySelector('.current-slide'); //return the index number
+
+    var targetIndex = dots.findIndex(function (dot) {
+      return dot === targetDot;
+    }); // console.log(targetIndex);
+
+    var targetSlide = slides[targetIndex];
+    moveToSlide(track, currentSlide, targetSlide);
+    updateDots(currentDot, targetDot); //arrow functions
+
+    hideShowArrows(slides, nextButton, prevButton, targetIndex);
+  });
+}
+},{}],"js/carouselDesignAlt.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = carouselDesignAlt;
+
+function carouselDesignAlt() {
+  var track = document.querySelector('.carousel3__container__track');
+  var slides = Array.from(track.children);
+  var nextButton = document.querySelector('.carousel3__button--right');
+  var prevButton = document.querySelector('.carousel3__button--left');
+  var dotsNav = document.querySelector('.carousel3__nav');
+  var dots = Array.from(dotsNav.children); //get the size of the slide
+
+  var slideSize = slides[0].getBoundingClientRect(); //get the width
+
+  var slideWidth = slideSize.width; //get the height
+
+  var slideHeight = slideSize.height; //arrange the slides next to one another
+  // slides[0].style.left = `${slideWidth * 0}px`;
+  // slides[1].style.left = `${slideWidth * 1}px`;
+
+  var setSlidePosition = function setSlidePosition(slide, index) {
+    slide.style.left = "".concat(slideWidth * index, "px");
+  }; //iterate the slides and assign the function
+
+
+  slides.forEach(setSlidePosition); //move slide function
+
+  var moveToSlide = function moveToSlide(track, currentSlide, targetSlide) {
+    //move to next slide
+    track.style.transform = 'translateX(-' + targetSlide.style.left + ')'; //update the class
+
+    currentSlide.classList.remove('current-slide2');
+    targetSlide.classList.add('current-slide2');
+  }; //update the dots
+
+
+  var updateDots = function updateDots(currentDot, targetDot) {
+    currentDot.classList.remove('current-slide2');
+    targetDot.classList.add('current-slide2');
+  }; //hiding the arrow buttons
+
+
+  var hideShowArrows = function hideShowArrows(slides, nextButton, prevButton, targetIndex) {
+    //for hiding the button
+    if (targetIndex === 0) {
+      prevButton.classList.add('is-hidden2');
+      nextButton.classList.remove('is-hidden2');
+    } else if (targetIndex === slides.length - 1) {
+      prevButton.classList.remove('is-hidden2');
+      nextButton.classList.add('is-hidden2');
+    } else {
+      nextButton.classList.add('is-hidden2');
+      prevButton.classList.add('is-hidden2');
+    }
+  }; //when click left, move slides to the left
+
+
+  prevButton.addEventListener('click', function (e) {
+    var currentSlide = track.querySelector('.current-slide2');
+    var prevSlide = currentSlide.previousElementSibling;
+    var currentDot = dotsNav.querySelector('.current-slide2');
+    var prevDot = currentDot.previousElementSibling;
+    var prevIndex = slides.findIndex(function (slide) {
+      return slide === prevSlide;
+    });
+    moveToSlide(track, currentSlide, prevSlide);
+    updateDots(currentDot, prevDot); //arrow functions
+
+    hideShowArrows(slides, nextButton, prevButton, prevIndex);
+  }); // when click right, move slides to the right
+
+  nextButton.addEventListener('click', function (e) {
+    //keep track of the slide
+    var currentSlide = track.querySelector('.current-slide2');
+    var nextSlide = currentSlide.nextElementSibling;
+    var currentDot = dotsNav.querySelector('.current-slide2');
+    var nextDot = currentDot.nextElementSibling;
+    var nextIndex = slides.findIndex(function (slide) {
+      return slide === nextSlide;
+    }); //pass args to move function
+
+    moveToSlide(track, currentSlide, nextSlide); //update the dots
+
+    updateDots(currentDot, nextDot); //arrow functions
+
+    hideShowArrows(slides, nextButton, prevButton, nextIndex);
+  }); //update the nav indicators
+
+  dotsNav.addEventListener('click', function (e) {
+    //what indicator was clicked on
+    //focus only the buttons
+    var targetDot = e.target.closest('button'); //check if null = stop the function
+
+    if (!targetDot) return;
+    var currentSlide = track.querySelector('.current-slide2');
+    var currentDot = dotsNav.querySelector('.current-slide2'); //return the index number
+
+    var targetIndex = dots.findIndex(function (dot) {
+      return dot === targetDot;
+    }); // console.log(targetIndex);
+
+    var targetSlide = slides[targetIndex];
+    moveToSlide(track, currentSlide, targetSlide);
+    updateDots(currentDot, targetDot); //arrow functions
+
+    hideShowArrows(slides, nextButton, prevButton, targetIndex);
+  });
+}
+},{}],"js/main.js":[function(require,module,exports) {
 "use strict";
 
 require("./../scss/main.scss");
 
-var root = document.documentElement;
-var elementDisplay = 5;
-var content = document.querySelector(".carousel__list");
+var _carousel = _interopRequireDefault(require("./carousel"));
 
-for (var i = 0; i < elementDisplay; i++) {
-  content.appendChild(content.children[i].cloneNode(true));
-}
+var _carouselDesign = _interopRequireDefault(require("./carouselDesign"));
 
-var track = document.querySelector('.carousel2__container__track');
-var slides = Array.from(track.children);
-var nextButton = document.querySelector('.carousel2__button--right');
-var prevButton = document.querySelector('.carousel2__button--left');
-var dotsNav = document.querySelector('.carousel2__nav');
-var dots = Array.from(dotsNav.children); //get the size of the slide
+var _carouselDesignAlt = _interopRequireDefault(require("./carouselDesignAlt"));
 
-var slideSize = slides[0].getBoundingClientRect(); //get the width
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var slideWidth = slideSize.width; //get the height
-
-var slideHeight = slideSize.height; //arrange the slides next to one another
-// slides[0].style.left = `${slideWidth * 0}px`;
-// slides[1].style.left = `${slideWidth * 1}px`;
-
-var setSlidePosition = function setSlidePosition(slide, index) {
-  slide.style.left = "".concat(slideWidth * index, "px");
-}; //iterate the slides and assign the function
-
-
-slides.forEach(setSlidePosition); //move slide function
-
-var moveToSlide = function moveToSlide(track, currentSlide, targetSlide) {
-  //move to next slide
-  track.style.transform = 'translateX(-' + targetSlide.style.left + ')'; //update the class
-
-  currentSlide.classList.remove('current-slide');
-  targetSlide.classList.add('current-slide');
-}; //update the dots
-
-
-var updateDots = function updateDots(currentDot, targetDot) {
-  currentDot.classList.remove('current-slide');
-  targetDot.classList.add('current-slide');
-}; //hiding the arrow buttons
-
-
-var hideShowArrows = function hideShowArrows(slides, nextButton, prevButton, targetIndex) {
-  //for hiding the button
-  if (targetIndex === 0) {
-    prevButton.classList.add('is-hidden');
-    nextButton.classList.remove('is-hidden');
-  } else if (targetIndex === slides.length - 1) {
-    prevButton.classList.remove('is-hidden');
-    nextButton.classList.add('is-hidden');
-  } else {
-    nextButton.classList.add('is-hidden');
-    prevButton.classList.add('is-hidden');
-  }
-}; //when click left, move slides to the left
-
-
-prevButton.addEventListener('click', function (e) {
-  var currentSlide = track.querySelector('.current-slide');
-  var prevSlide = currentSlide.previousElementSibling;
-  var currentDot = dotsNav.querySelector('.current-slide');
-  var prevDot = currentDot.previousElementSibling;
-  var prevIndex = slides.findIndex(function (slide) {
-    return slide === prevSlide;
-  });
-  moveToSlide(track, currentSlide, prevSlide);
-  updateDots(currentDot, prevDot); //arrow functions
-
-  hideShowArrows(slides, nextButton, prevButton, prevIndex);
-}); // when click right, move slides to the right
-
-nextButton.addEventListener('click', function (e) {
-  //keep track of the slide
-  var currentSlide = track.querySelector('.current-slide');
-  var nextSlide = currentSlide.nextElementSibling;
-  var currentDot = dotsNav.querySelector('.current-slide');
-  var nextDot = currentDot.nextElementSibling;
-  var nextIndex = slides.findIndex(function (slide) {
-    return slide === nextSlide;
-  }); //pass args to move function
-
-  moveToSlide(track, currentSlide, nextSlide); //update the dots
-
-  updateDots(currentDot, nextDot); //arrow functions
-
-  hideShowArrows(slides, nextButton, prevButton, nextIndex);
-}); //update the nav indicators
-
-dotsNav.addEventListener('click', function (e) {
-  //what indicator was clicked on
-  //focus only the buttons
-  var targetDot = e.target.closest('button'); //check if null = stop the function
-
-  if (!targetDot) return;
-  var currentSlide = track.querySelector('.current-slide');
-  var currentDot = dotsNav.querySelector('.current-slide'); //return the index number
-
-  var targetIndex = dots.findIndex(function (dot) {
-    return dot === targetDot;
-  }); // console.log(targetIndex);
-
-  var targetSlide = slides[targetIndex];
-  moveToSlide(track, currentSlide, targetSlide);
-  updateDots(currentDot, targetDot); //arrow functions
-
-  hideShowArrows(slides, nextButton, prevButton, targetIndex);
-});
-},{"./../scss/main.scss":"scss/main.scss"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+(0, _carousel.default)();
+(0, _carouselDesign.default)();
+(0, _carouselDesignAlt.default)();
+},{"./../scss/main.scss":"scss/main.scss","./carousel":"js/carousel.js","./carouselDesign":"js/carouselDesign.js","./carouselDesignAlt":"js/carouselDesignAlt.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -332,7 +474,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55522" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50920" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
