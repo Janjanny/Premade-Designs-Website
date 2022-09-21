@@ -793,7 +793,6 @@
 .pop-up {
   border-radius: 2rem;
   border: none;
-  overflow: hidden;
   position: fixed;
   left: 50%;
   transform: translateX(-50%);
@@ -847,6 +846,10 @@
   border-radius: 1rem;
   margin-bottom: 1rem;
   font-size: 1.1em;
+}
+.pop-up__content form input[type=image] {
+  width: 10rem;
+  height: 5rem;
 }
 .pop-up__content form input:focus {
   outline: none;
