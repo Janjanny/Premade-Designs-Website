@@ -10,10 +10,10 @@
 </head>
 <body>
     <nav class="nav-bar">
-        <a href=""><img src="/assets/logo.png" alt="" class="logo"></a>
+        <a href=""><h1 class="logo">YOPI</h1></a>
         <ul class="nav-links">
-            <li><a href="">About</a></li>
-            <li><a href="">Designs</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#banner">Designs</a></li>
             <li><a href="">Contacts</a></li>
         </ul>
     </nav>
@@ -64,7 +64,7 @@
                     </li>
                 </ul>
         </div>
-        <section class="about_me">
+        <section class="about_me" id="about">
             <h1 class="about_me__title">
                 About Me
             </h1>
@@ -84,7 +84,7 @@
                 <div class="about_me__txt_div__button"><a href="">Message Me</a></div>
             </div>
         </section>
-        <section class="banner">
+        <section class="banner" id="banner">
             <h1 class="banner__title">
                 AVAILABLE Designs
             </h1>
@@ -135,7 +135,8 @@
                     </ul>
                     <p class="design__info__text_description">Exclusive to one owner only. Half Downpayment before starting the layout and another half when transferring the files. You can contact me for more details.</p>
                     <h2 class="design__info__text_price">PHP 1000 // 20 USD</h2>
-                    <div class="button-div"><a href="">Inquire this Design</a></div>
+                    
+                    <div class="button-div" ><a id="button1">Inquire this Design</a></div>
 
                 </div>
             </div>
@@ -194,6 +195,40 @@
             <p class="design-alt__note"><em>COPYRIGHT PROTECTED. DO NOT COPY</em></p>
 
         </section>
+
+
+        <!-- Pop up Form -->
+
+        <div class="pop-up">
+            <div class="pop-up__content">
+                <div id="close-form"><i class="fa-solid fa-xmark icon" ></i></div>
+                
+                <form action="https://formsubmit.co/janjanbeboso0912@gmail.com" method="POST" >
+
+
+                    <label for="Design">Design</label>
+                    <input type="text" name="Design" required value="Intoxicated" readonly>
+
+                    <label for="Email">Email</label>
+                    <input type="email" name="Email" required pattern=".+@.+\..+" placeholder="example@sample.com">
+
+                    <label for="Name">Name</label>
+                    <input type="text" name="Name" required placeholder="Juan Dela Cruz">
+
+                    
+
+                    <label for="Contact-Number">Contact Numberr</label>
+                    <input type="text" name="Contact-Number" required placeholder="0912-345-6789">
+
+                    <label for="Message">Message</label>
+                    <textarea name="Message" id="message-box" rows="5" cols="5" placeholder="I would like to buy this design..."></textarea>
+
+
+                    <button type="submit" class="submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+
 
         <!--Footer-->
 

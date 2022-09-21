@@ -430,6 +430,61 @@ function carouselDesignAlt() {
     hideShowArrows(slides, nextButton, prevButton, targetIndex);
   });
 }
+},{}],"js/navAnimation.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = navAnimate;
+
+function navAnimate() {
+  var lastScrollTop = 0;
+  var navbar = document.querySelector(".nav-bar");
+  window.addEventListener("scroll", function () {
+    var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (scrollTop > lastScrollTop) {
+      navbar.style.top = '-4rem';
+    } else if (window.pageYOffset === 0) {
+      navbar.style.top = '-4rem';
+    } else {
+      navbar.style.top = '0';
+    }
+
+    lastScrollTop = scrollTop;
+  });
+} // export default function navAnimate() {
+//     let lastScrollTop = 0;
+//     let navbar = document.querySelector(".nav-bar");
+//     window.addEventListener("scroll", () => {
+//         if (window.pageYOffset > lastScrollTop) {
+//             navbar.style.top = '0';
+//         }
+//         else {
+//             navbar.style.top = '-4rem';
+//         }
+//     })
+// }
+},{}],"js/form1.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = form1;
+
+function form1() {
+  var currentScreen = window.scrollY;
+  var popUpForm = document.querySelector('.pop-up');
+  document.getElementById('button1').addEventListener('click', function () {
+    popUpForm.style.display = 'flex';
+    popUpForm.style.marginTop = Math.round(currentScreen);
+  });
+  document.getElementById('close-form').addEventListener('click', function () {
+    popUpForm.style.display = 'none';
+  });
+}
 },{}],"js/main.js":[function(require,module,exports) {
 "use strict";
 
@@ -441,12 +496,18 @@ var _carouselDesign = _interopRequireDefault(require("./carouselDesign"));
 
 var _carouselDesignAlt = _interopRequireDefault(require("./carouselDesignAlt"));
 
+var _navAnimation = _interopRequireDefault(require("./navAnimation"));
+
+var _form = _interopRequireDefault(require("./form1"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 (0, _carousel.default)();
 (0, _carouselDesign.default)();
 (0, _carouselDesignAlt.default)();
-},{"./../scss/main.scss":"scss/main.scss","./carousel":"js/carousel.js","./carouselDesign":"js/carouselDesign.js","./carouselDesignAlt":"js/carouselDesignAlt.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+(0, _navAnimation.default)();
+(0, _form.default)();
+},{"./../scss/main.scss":"scss/main.scss","./carousel":"js/carousel.js","./carouselDesign":"js/carouselDesign.js","./carouselDesignAlt":"js/carouselDesignAlt.js","./navAnimation":"js/navAnimation.js","./form1":"js/form1.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -474,7 +535,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54384" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64067" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
