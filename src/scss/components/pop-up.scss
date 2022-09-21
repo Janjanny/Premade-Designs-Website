@@ -2,26 +2,39 @@
 
 
 .pop-up {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 10%;
-    display: none;
-    background-color: rgba($color: #000000, $alpha: .5);
-    justify-content: center;
-    align-items: center;
-    z-index: 10;
+    border-radius: 2rem;
+    overflow: hidden;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 5%;
+    transition: all .5s;
+
+    &::backdrop {
+        background-color:hsla(0,100%,50%,1);
+    background-image:
+    radial-gradient(at 40% 20%, hsla(28,100%,74%,1) 0px, transparent 50%),
+    radial-gradient(at 80% 0%, hsla(189,100%,56%,1) 0px, transparent 50%),
+    radial-gradient(at 0% 50%, hsla(355,100%,93%,1) 0px, transparent 50%),
+    radial-gradient(at 80% 50%, hsla(340,100%,76%,1) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, hsla(22,100%,77%,1) 0px, transparent 50%),
+    radial-gradient(at 80% 100%, hsla(242,100%,70%,1) 0px, transparent 50%),
+    radial-gradient(at 0% 0%, hsla(343,100%,76%,1) 0px, transparent 50%);
+    opacity: .3;
+    }
 
     &__content {
         background-color:$black;
         width: 35rem;
         height: 43rem;
-        border-radius: 2rem;
         padding: 3rem;
         display: flex;
         justify-content: center;
         align-items: center;
-        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+
+        
 
         .icon {
             position: absolute;
@@ -44,10 +57,11 @@
             flex-direction: column;
             justify-content: center;
             width: 90%;
+            height: 100%;
             margin-left: auto;
             margin-right: auto;
-            position: relative;
             color: $white;
+
 
 
             input {

@@ -438,34 +438,34 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = navAnimate;
 
+// export default function navAnimate() {
+//     var lastScrollTop = 0;
+//     let navbar = document.querySelector(".nav-bar");
+//     window.addEventListener("scroll", () => {
+//         var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+//         if (scrollTop > lastScrollTop) {
+//             navbar.style.top = '-4rem';
+//         }
+//         else if (window.pageYOffset === 0) {
+//             navbar.style.top = '-4rem';
+//         }
+//         else {
+//             navbar.style.top = '0';
+//         }
+//         lastScrollTop = scrollTop;
+//     })
+// }
 function navAnimate() {
   var lastScrollTop = 0;
   var navbar = document.querySelector(".nav-bar");
   window.addEventListener("scroll", function () {
-    var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-    if (scrollTop > lastScrollTop) {
-      navbar.style.top = '-4rem';
-    } else if (window.pageYOffset === 0) {
-      navbar.style.top = '-4rem';
-    } else {
+    if (window.pageYOffset > lastScrollTop) {
       navbar.style.top = '0';
+    } else {
+      navbar.style.top = '-4rem';
     }
-
-    lastScrollTop = scrollTop;
   });
-} // export default function navAnimate() {
-//     let lastScrollTop = 0;
-//     let navbar = document.querySelector(".nav-bar");
-//     window.addEventListener("scroll", () => {
-//         if (window.pageYOffset > lastScrollTop) {
-//             navbar.style.top = '0';
-//         }
-//         else {
-//             navbar.style.top = '-4rem';
-//         }
-//     })
-// }
+}
 },{}],"js/form1.js":[function(require,module,exports) {
 "use strict";
 
@@ -475,14 +475,15 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = form1;
 
 function form1() {
-  var currentScreen = window.scrollY;
+  var designName = document.querySelector('.designName');
   var popUpForm = document.querySelector('.pop-up');
+  var name = document.getElementById('title1').textContent;
   document.getElementById('button1').addEventListener('click', function () {
-    popUpForm.style.display = 'flex';
-    popUpForm.style.marginTop = Math.round(currentScreen);
+    popUpForm.showModal();
+    designName.setAttribute('value', name);
   });
   document.getElementById('close-form').addEventListener('click', function () {
-    popUpForm.style.display = 'none';
+    popUpForm.close();
   });
 }
 },{}],"js/main.js":[function(require,module,exports) {

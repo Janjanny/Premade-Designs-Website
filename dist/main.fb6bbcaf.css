@@ -791,26 +791,29 @@
 }
 
 .pop-up {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 10%;
-  display: none;
-  background-color: rgba(0, 0, 0, 0.5);
-  justify-content: center;
-  align-items: center;
-  z-index: 10;
+  border-radius: 2rem;
+  overflow: hidden;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 5%;
+  transition: all 0.5s;
+}
+.pop-up::backdrop {
+  background-color: hsl(0deg, 100%, 50%);
+  background-image: radial-gradient(at 40% 20%, hsl(28deg, 100%, 74%) 0px, transparent 50%), radial-gradient(at 80% 0%, hsl(189deg, 100%, 56%) 0px, transparent 50%), radial-gradient(at 0% 50%, hsl(355deg, 100%, 93%) 0px, transparent 50%), radial-gradient(at 80% 50%, hsl(340deg, 100%, 76%) 0px, transparent 50%), radial-gradient(at 0% 100%, hsl(22deg, 100%, 77%) 0px, transparent 50%), radial-gradient(at 80% 100%, hsl(242deg, 100%, 70%) 0px, transparent 50%), radial-gradient(at 0% 0%, hsl(343deg, 100%, 76%) 0px, transparent 50%);
+  opacity: 0.3;
 }
 .pop-up__content {
   background-color: #101010;
   width: 35rem;
   height: 43rem;
-  border-radius: 2rem;
   padding: 3rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
+  margin-left: auto;
+  margin-right: auto;
 }
 .pop-up__content .icon {
   position: absolute;
@@ -829,9 +832,9 @@
   flex-direction: column;
   justify-content: center;
   width: 90%;
+  height: 100%;
   margin-left: auto;
   margin-right: auto;
-  position: relative;
   color: #FFFFFF;
 }
 .pop-up__content form input[type=email], .pop-up__content form input[type=text] {
