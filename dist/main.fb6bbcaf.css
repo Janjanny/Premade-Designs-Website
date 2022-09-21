@@ -792,17 +792,17 @@
 
 .pop-up {
   border-radius: 2rem;
+  border: none;
   overflow: hidden;
   position: fixed;
   left: 50%;
   transform: translateX(-50%);
   top: 5%;
   transition: all 0.5s;
+  box-shadow: 0 0 15px #FFFFFF;
 }
 .pop-up::backdrop {
-  background-color: hsl(0deg, 100%, 50%);
-  background-image: radial-gradient(at 40% 20%, hsl(28deg, 100%, 74%) 0px, transparent 50%), radial-gradient(at 80% 0%, hsl(189deg, 100%, 56%) 0px, transparent 50%), radial-gradient(at 0% 50%, hsl(355deg, 100%, 93%) 0px, transparent 50%), radial-gradient(at 80% 50%, hsl(340deg, 100%, 76%) 0px, transparent 50%), radial-gradient(at 0% 100%, hsl(22deg, 100%, 77%) 0px, transparent 50%), radial-gradient(at 80% 100%, hsl(242deg, 100%, 70%) 0px, transparent 50%), radial-gradient(at 0% 0%, hsl(343deg, 100%, 76%) 0px, transparent 50%);
-  opacity: 0.3;
+  backdrop-filter: blur(10px);
 }
 .pop-up__content {
   background-color: #101010;
