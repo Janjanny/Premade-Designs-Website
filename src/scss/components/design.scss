@@ -21,6 +21,10 @@
 
     }
 
+    #title3 {
+        color: $design3;
+    }
+
     &__quote {
         color: $white;
         font-size: $button-font;
@@ -111,6 +115,24 @@
                 }
 
                 
+            }
+
+            .design3 {
+                background-color: $design3;
+
+
+                a {
+
+                    &:hover {
+                        color: $design3;
+                    }
+                }
+
+
+                &:hover{
+                    background-color: transparent;
+                    border: 2px solid $design3;
+                }
             }
         }
     }

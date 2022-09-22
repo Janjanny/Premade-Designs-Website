@@ -386,6 +386,9 @@
   text-transform: uppercase;
   text-align: center;
 }
+.design #title3 {
+  color: #FF5452;
+}
 .design__quote {
   color: #FFFFFF;
   font-size: 1.8em;
@@ -474,6 +477,16 @@
 .design__info__text .button-div:hover {
   background-color: #101010;
   border: 2px solid #B7D432;
+}
+.design__info__text .design3 {
+  background-color: #FF5452;
+}
+.design__info__text .design3 a:hover {
+  color: #FF5452;
+}
+.design__info__text .design3:hover {
+  background-color: transparent;
+  border: 2px solid #FF5452;
 }
 .design__note {
   text-align: center;
