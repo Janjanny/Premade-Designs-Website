@@ -491,7 +491,7 @@
   color: #101010;
 }
 .design-alt__title {
-  color: #444444;
+  color: #000000;
   font-size: 7.7em;
   font-weight: 800;
   letter-spacing: -0.4rem;
@@ -558,7 +558,7 @@
   overflow: hidden;
   width: 22rem;
   height: 3.5rem;
-  background-color: #444444;
+  background-color: #000000;
   margin-top: 2.5rem;
   transition: all 0.3s;
 }
@@ -581,7 +581,7 @@
   transition: all 0.3s;
 }
 .design-alt__info__text .button-div a:hover {
-  color: #444444;
+  color: #000000;
 }
 .design-alt__info__text .button-div:hover {
   background-color: transparent;
@@ -798,7 +798,7 @@
   transform: translateX(-50%);
   top: 5%;
   transition: all 0.5s;
-  box-shadow: 0 0 15px #FFFFFF;
+  border: 1px solid #FFFFFF;
 }
 .pop-up::backdrop {
   backdrop-filter: blur(10px);

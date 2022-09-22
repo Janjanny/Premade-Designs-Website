@@ -9,8 +9,7 @@
     transform: translateX(-50%);
     top: 5%;
     transition: all .5s;
-    box-shadow: 0 0 15px $white;
-
+    border: 1px solid $white;
     &::backdrop {
         backdrop-filter: blur(10px);
     }
