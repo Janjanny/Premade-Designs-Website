@@ -506,6 +506,138 @@ function form2() {
     popUpForm.close();
   });
 }
+},{}],"js/form3.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = form2;
+
+function form2() {
+  var designName = document.querySelector('.designName');
+  var popUpForm = document.querySelector('.pop-up');
+  var name = document.getElementById('title3').textContent;
+  document.getElementById('button3').addEventListener('click', function () {
+    popUpForm.showModal();
+    designName.setAttribute('value', name);
+  });
+  document.getElementById('close-form').addEventListener('click', function () {
+    popUpForm.close();
+  });
+}
+},{}],"js/carouselDesign3.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = carouselDesign3;
+
+function carouselDesign3() {
+  var track = document.querySelector('.design3-container');
+  var slides = Array.from(track.children);
+  var nextButton = document.querySelector('.design3-right-button');
+  var prevButton = document.querySelector('.design3-left-button');
+  var dotsNav = document.querySelector('.design3-nav');
+  var dots = Array.from(dotsNav.children); //get the size of the slide
+
+  var slideSize = slides[0].getBoundingClientRect(); //get the width
+
+  var slideWidth = slideSize.width; //get the height
+
+  var slideHeight = slideSize.height; //arrange the slides next to one another
+  // slides[0].style.left = `${slideWidth * 0}px`;
+  // slides[1].style.left = `${slideWidth * 1}px`;
+
+  var setSlidePosition = function setSlidePosition(slide, index) {
+    slide.style.left = "".concat(slideWidth * index, "px");
+  }; //iterate the slides and assign the function
+
+
+  slides.forEach(setSlidePosition); //move slide function
+
+  var moveToSlide = function moveToSlide(track, currentSlide, targetSlide) {
+    //move to next slide
+    track.style.transform = 'translateX(-' + targetSlide.style.left + ')'; //update the class
+
+    currentSlide.classList.remove('current-slide3');
+    targetSlide.classList.add('current-slide3');
+  }; //update the dots
+
+
+  var updateDots = function updateDots(currentDot, targetDot) {
+    currentDot.classList.remove('current-slide3');
+    targetDot.classList.add('current-slide3');
+  }; //hiding the arrow buttons
+
+
+  var hideShowArrows = function hideShowArrows(slides, nextButton, prevButton, targetIndex) {
+    //for hiding the button
+    if (targetIndex === 0) {
+      prevButton.classList.add('is-hidden3');
+      nextButton.classList.remove('is-hidden3');
+    } else if (targetIndex === slides.length - 1) {
+      prevButton.classList.remove('is-hidden3');
+      nextButton.classList.add('is-hidden3');
+    } else {
+      nextButton.classList.add('is-hidden3');
+      prevButton.classList.add('is-hidden3');
+    }
+  }; //when click left, move slides to the left
+
+
+  prevButton.addEventListener('click', function (e) {
+    var currentSlide = track.querySelector('.current-slide3');
+    var prevSlide = currentSlide.previousElementSibling;
+    var currentDot = dotsNav.querySelector('.current-slide3');
+    var prevDot = currentDot.previousElementSibling;
+    var prevIndex = slides.findIndex(function (slide) {
+      return slide === prevSlide;
+    });
+    moveToSlide(track, currentSlide, prevSlide);
+    updateDots(currentDot, prevDot); //arrow functions
+
+    hideShowArrows(slides, nextButton, prevButton, prevIndex);
+  }); // when click right, move slides to the right
+
+  nextButton.addEventListener('click', function (e) {
+    //keep track of the slide
+    var currentSlide = track.querySelector('.current-slide3');
+    var nextSlide = currentSlide.nextElementSibling;
+    var currentDot = dotsNav.querySelector('.current-slide3');
+    var nextDot = currentDot.nextElementSibling;
+    var nextIndex = slides.findIndex(function (slide) {
+      return slide === nextSlide;
+    }); //pass args to move function
+
+    moveToSlide(track, currentSlide, nextSlide); //update the dots
+
+    updateDots(currentDot, nextDot); //arrow functions
+
+    hideShowArrows(slides, nextButton, prevButton, nextIndex);
+  }); //update the nav indicators
+
+  dotsNav.addEventListener('click', function (e) {
+    //what indicator was clicked on
+    //focus only the buttons
+    var targetDot = e.target.closest('button'); //check if null = stop the function
+
+    if (!targetDot) return;
+    var currentSlide = track.querySelector('.current-slide3');
+    var currentDot = dotsNav.querySelector('.current-slide3'); //return the index number
+
+    var targetIndex = dots.findIndex(function (dot) {
+      return dot === targetDot;
+    }); // console.log(targetIndex);
+
+    var targetSlide = slides[targetIndex];
+    moveToSlide(track, currentSlide, targetSlide);
+    updateDots(currentDot, targetDot); //arrow functions
+
+    hideShowArrows(slides, nextButton, prevButton, targetIndex);
+  });
+}
 },{}],"js/main.js":[function(require,module,exports) {
 "use strict";
 
@@ -523,6 +655,10 @@ var _form = _interopRequireDefault(require("./form1"));
 
 var _form2 = _interopRequireDefault(require("./form2"));
 
+var _form3 = _interopRequireDefault(require("./form3"));
+
+var _carouselDesign2 = _interopRequireDefault(require("./carouselDesign3"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 (0, _carousel.default)();
@@ -531,7 +667,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 (0, _navAnimation.default)();
 (0, _form.default)();
 (0, _form2.default)();
-},{"./../scss/main.scss":"scss/main.scss","./carousel":"js/carousel.js","./carouselDesign":"js/carouselDesign.js","./carouselDesignAlt":"js/carouselDesignAlt.js","./navAnimation":"js/navAnimation.js","./form1":"js/form1.js","./form2":"js/form2.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+(0, _form3.default)();
+(0, _carouselDesign2.default)();
+},{"./../scss/main.scss":"scss/main.scss","./carousel":"js/carousel.js","./carouselDesign":"js/carouselDesign.js","./carouselDesignAlt":"js/carouselDesignAlt.js","./navAnimation":"js/navAnimation.js","./form1":"js/form1.js","./form2":"js/form2.js","./form3":"js/form3.js","./carouselDesign3":"js/carouselDesign3.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -559,7 +697,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60436" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65452" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

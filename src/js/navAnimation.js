@@ -23,6 +23,7 @@ export default function navAnimate() {
     let lastScrollTop = 0;
     let navbar = document.querySelector(".nav-bar");
 
+
     window.addEventListener("scroll", () => {
         if (window.pageYOffset > lastScrollTop) {
             navbar.style.top = '0';

@@ -124,11 +124,15 @@ $animation-duration: calc($elements * 4s);
         cursor: pointer;
     }
 
-    &__indicator.current-slide{
+    &__indicator.current-slide {
         background-color: rgba($color: $white, $alpha: .80);
     }
 
-    .is-hidden {
+    &__indicator.current-slide3 {
+        background-color: rgba($color: $white, $alpha: .80);
+    }
+
+    .is-hidden, .is-hidden3 {
         display: none;
     }
 }
